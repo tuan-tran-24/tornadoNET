@@ -6,4 +6,4 @@
 * Tornadoes damage and destroy houses, resulting in societal and economic losses.
 * Economic losses from tornadoes are estimated to be $1.0 billion annually.
 
-![Tornado Map](assets/Tornado Map.jpg)
+![Tornado Map](assets/Tornado%20Map.jpg)
