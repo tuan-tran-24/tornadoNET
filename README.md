@@ -28,7 +28,20 @@ The automation pipeline for the recovery assessment is presented in Figure 2:
 ![Frame Work](assets/Framework.png)
 **Figure 2**: Automated Recovery Assessment Framework. 
 
-## Data Description
+## Step 1: Gather Input Data
+* Spatial Videos
+* GIS files
+* Parcel Polygons
+* House Polygons
+
+## Step 2: Process Data
+* First, frames will be extracted from spatial videos at a 1-second interval
+* Process Spatial Data Toolbox will be used to:
+  * Match the frame with the GIS
+  * Transform and map the GIS to the corresponding parcels
+  * Group frames into Address Folders (i.e., frames containing scene of the house)
+
+## Step 3: Label Data
 
 **Table 1**. Criteria for Labeling Frames for the Classification Model
 | Recovery States | Elaboration |
@@ -41,6 +54,26 @@ The automation pipeline for the recovery assessment is presented in Figure 2:
 ![Samples](assets/samples.png)
 **Figure 3**: Samples of Training Datasets: (a) Uninhabited; (b) Empty; (c) Rebuilding; (d) Rebuilt. 
 
-## Deep Learning
+## Step 4: Split Train/Validation Dataset
+
+## Step 5: Train Deep Learning Models
+
+## Step 6: Classify the Data
+
+## Step 7: Analyze Longitudinal Results
+
+## Installation
+1. Clone this repository
+
+2. Install dependencies
+
+3. Run setup from the repository root directory
+
+4. 
+
+## Citation
+Use this bibtex to cite this repository
+
+
 
 
