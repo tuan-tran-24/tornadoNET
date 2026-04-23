@@ -1,4 +1,4 @@
-# Automated Temporal Tracking of Post-Tornado Housing Recovery Using Street-View Imagery, Deep Learning, and GIS
+# A User-Friendly Tool to Automate Assessment of Housing Recovery Following a Tornado
 
 ## Introduction
 * Each year, the U.S. experiences more than 1,200 tornadoes, making it the most tornado-prone country in the world.
