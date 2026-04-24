@@ -19,9 +19,10 @@ python -m pip install --upgrade pip setuptools wheel
 
 5. Install dependencies
 ```
+python -m pip install Pillow
+python -m pip install --no-deps torch torchvision
 python -m pip install ^
 torch ^
-torchvision ^
 Pillow ^
 timm ^
 torchcam ^
