@@ -27,7 +27,6 @@ timm ^
 torchcam ^
 albumentations ^
 opencv-python ^
-numpy ^
 matplotlib ^
 pandas ^
 scikit-learn ^
