@@ -22,8 +22,6 @@ python -m pip install --upgrade pip setuptools wheel
 python -m pip install Pillow
 python -m pip install --no-deps torch torchvision
 python -m pip install ^
-torch ^
-Pillow ^
 timm ^
 torchcam ^
 albumentations ^
