@@ -14,7 +14,7 @@
 
 ## Step 2: Process Data
 * Extract frame at an interval of choices (e.g. 1 second)
-* [Process Spatial Data Toolbox](toolbox/Process_Spatial_Video_&_GIS.pyt) will be used to:
+* [Process Spatial Video & GIS Toolbox](toolbox/Process_Spatial_Video_&_GIS.pyt) will be used to:
   * Match the frame with the GIS
   * Group frames into Address Folders (i.e., frames containing views of the house)
 
