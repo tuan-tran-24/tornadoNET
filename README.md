@@ -1,20 +1,5 @@
 # A User-Friendly Tool to Automate Assessment of Housing Recovery Following a Tornado
 
-## Introduction
-* Each year, the U.S. experiences more than 1,200 tornadoes, making it the most tornado-prone country in the world.
-* Texas, Florida, and Oklahoma are the leading tornado-prone states.
-* Tornadoes damage and destroy houses, resulting in societal and economic losses.
-* Economic losses from tornadoes are estimated to be $1.0 billion annually.
-
-![Tornado Map](assets/Tornado%20Map.jpg)
-**Figure 1**: U.S. Tornado Risk Map Using FEMA Data 
-
-## Motivation
-* Current housing recovery methods, such as door-to-door surveys, are time-consuming and labor-intensive.
-* Street-view imagery and deep learning have not been used to assess housing recovery over multiple time periods.
-* Past studies focused on deep learning algorithms rather than an automation pipeline.
-* An automation pipeline with user-facing applications will empower community leaders to track post-tornado housing recovery and make informed recovery decisions.
-
 ## Methodology
 The automation pipeline for the recovery assessment is presented in Figure 2:
 * **Step 1**: The automation begins with collecting data. First, the spatial video data and its corresponding GIS data are recorded; the video will then be extracted into frames at an interval of one second, which matches the pace of the GIS data. Parcel data is available on ArcGIS Online, which is supplied by the local authority. House polygons are available through the Microsoft Building Footprint dataset, which contains building footprint polygons from 50 states in the U.S (Microsoft, 2018).
