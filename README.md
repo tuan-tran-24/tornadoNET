@@ -1,5 +1,8 @@
 # A User-Friendly Tool to Automate Assessment of Housing Recovery Following a Tornado
 
+<h5 align="left">by <a href="">Tuan Tran</a>, <a href="https://scholar.google.com/citations?user=HxlMZr8AAAAJ&hl=en">Abdullah Braik</a>, <a href="https://scholar.google.com/citations?user=VsgAGKQAAAAJ&hl=en">Maria Koliou</a>
+
+
 ![Frame Work](assets/Framework.png)
 **Figure 1**: Automated Recovery Assessment Framework. 
 
