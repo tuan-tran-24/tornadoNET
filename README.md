@@ -1,15 +1,5 @@
 # A User-Friendly Tool to Automate Assessment of Housing Recovery Following a Tornado
 
-## Methodology
-The automation pipeline for the recovery assessment is presented in Figure 2:
-* **Step 1**: The automation begins with collecting data. First, the spatial video data and its corresponding GIS data are recorded; the video will then be extracted into frames at an interval of one second, which matches the pace of the GIS data. Parcel data is available on ArcGIS Online, which is supplied by the local authority. House polygons are available through the Microsoft Building Footprint dataset, which contains building footprint polygons from 50 states in the U.S (Microsoft, 2018).
-* **Step 2**: All data are processed by a custom ArcGIS toolbox that matches each frame with its corresponding GIS data and then projects the GIS points to the associated parcel. The output of this ArcGIS toolbox is a set of address folders, each containing a series of frames of the parcel that the spatial video records. Since building architecture across the U.S. or in other countries can vary, this framework allows users to retrain the deep learning model or use the pre-trained model to make inferences.
-* **Step 3**: The address folders are sorted, or “labeled”, into different categories representing various housing recovery states.
-* **Step 4**: All labeled data are projected back into ArcGIS and split into training and validation datasets for the deep learning model.
-* **Step 5**: The deep learning models will be trained on the datasets processed per the previous step.
-* **Step 6**: The trained models can be used to classify the data. 
-* **Step 7**: A longitudinal analysis of recovery can be performed to understand the pace or pattern of recovery.
-
 ![Frame Work](assets/Framework.png)
 **Figure 2**: Automated Recovery Assessment Framework. 
 
