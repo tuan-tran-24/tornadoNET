@@ -1,6 +1,6 @@
-# A User-Friendly Tool to Automate Assessment of Housing Recovery Following a Tornado
+<h2 align="left"> A User-Friendly Tool to Automate Assessment of Housing Recovery Following a Tornado </h2>
 
-<h5 align="left">by <a href="">Tuan Tran</a>, <a href="https://scholar.google.com/citations?user=HxlMZr8AAAAJ&hl=en">Abdullah Braik</a>, <a href="https://scholar.google.com/citations?user=VsgAGKQAAAAJ&hl=en">Maria Koliou</a>
+<h4 align="left">by <a href="">Tuan Tran</a>, <a href="https://scholar.google.com/citations?user=HxlMZr8AAAAJ&hl=en">Abdullah Braik</a>, <a href="https://scholar.google.com/citations?user=VsgAGKQAAAAJ&hl=en">Maria Koliou</h4>
 
 
 ![Frame Work](assets/Framework.png)
@@ -14,7 +14,7 @@
 
 ## Step 2: Process Data
 * Extract frame at an interval of choices (e.g. 1 second)
-* Process Spatial Data Toolbox will be used to:
+* [Process Spatial Data Toolbox](toolbox/Process_Spatial_Video_&_GIS.pyt) will be used to:
   * Match the frame with the GIS
   * Group frames into Address Folders (i.e., frames containing views of the house)
 
