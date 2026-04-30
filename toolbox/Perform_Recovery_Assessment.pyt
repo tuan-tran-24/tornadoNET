@@ -93,29 +93,55 @@ def list_images_recursive(address_folder):
     return image_paths
 
 def is_address_folder_name(folder_name):
-    return extract_pin_from_folder_name(folder_name) is not None
+    if not folder_name:
+        return False
+
+    normalized_name = normalize_text(folder_name)
+
+    ignored_folder_names = {
+        "EMPTY",
+        "REBUILT",
+        "REBUILDING",
+        "UNINHABITED",
+        "OTHER",
+        "SURROUNDING",
+    }
+
+    if normalized_name in ignored_folder_names:
+        return False
+
+    return True
 
 def iter_address_folders(selected_roots):
+    image_extensions = {".jpg", ".jpeg", ".png", ".webp"}
+
     for root in selected_roots:
         if not root or not os.path.isdir(root):
-            continue
-
-        if is_address_folder_name(os.path.basename(root)):
-            frame_paths = list_images_recursive(root)
-            if frame_paths:
-                yield os.path.basename(root), root, frame_paths
             continue
 
         for current_dir, dirs, files in os.walk(root):
             dirs[:] = [directory for directory in dirs if directory.lower() != "surrounding"]
             current_name = os.path.basename(current_dir)
 
+            direct_images = [
+                os.path.join(current_dir, filename)
+                for filename in files
+                if os.path.splitext(filename)[1].lower() in image_extensions
+            ]
+
+            is_selected_root = os.path.normpath(current_dir) == os.path.normpath(root)
+            root_can_be_address = bool(direct_images) or extract_pin_from_folder_name(current_name) is not None
+
+            if is_selected_root and not root_can_be_address:
+                continue
+
             if is_address_folder_name(current_name):
                 frame_paths = list_images_recursive(current_dir)
+
                 if frame_paths:
                     yield current_name, current_dir, frame_paths
-                dirs[:] = []
 
+                dirs[:] = []
 
 def find_field_case_insensitive(feature_class, wanted_name):
     wanted_key = re.sub(r"[\s_]+", "", wanted_name).lower()
@@ -139,13 +165,11 @@ def verify_exists(path, tries=20, delay=0.2):
         time.sleep(delay)
     return arcpy.Exists(path)
 
-
 def safe_feature_class_name(name, gdb):
     try:
         return arcpy.ValidateTableName(os.path.basename(name), gdb)
     except Exception:
         return re.sub(r"[^A-Za-z0-9_]+", "_", os.path.basename(name))[:120]
-
 
 def clear_workspace_locks():
     try:
@@ -153,7 +177,6 @@ def clear_workspace_locks():
     except Exception:
         pass
     time.sleep(0.15)
-
 
 def force_enable_attachments(feature_class_path):
     description = arcpy.Describe(feature_class_path)
@@ -211,7 +234,6 @@ def force_enable_attachments(feature_class_path):
 
     return feature_class_path
 
-
 def make_local_scratch_gdb():
     base_folder = os.environ.get("LOCALAPPDATA", os.path.expanduser("~"))
     run_folder = os.path.join(
@@ -224,7 +246,6 @@ def make_local_scratch_gdb():
     scratch_gdb = os.path.join(run_folder, "scratch.gdb")
     arcpy.management.CreateFileGDB(run_folder, "scratch")
     return scratch_gdb
-
 
 def copy_back_if_possible(temp_feature_class, desired_feature_class, retries=6, delay=1.25):
     if os.path.normpath(temp_feature_class) == os.path.normpath(desired_feature_class):
@@ -257,7 +278,6 @@ def copy_back_if_possible(temp_feature_class, desired_feature_class, retries=6, 
         time.sleep(delay)
 
     return temp_feature_class
-
 
 def _transform(image_size=256):
     return transforms.Compose([
@@ -889,52 +909,45 @@ class PerformRecoveryAssessment(object):
             if not valid_frame_paths:
                 continue
 
+            bucket = address_buckets.get(normalized_name)
+
+            if bucket is None:
+                bucket = {
+                    "pin": pin_value,
+                    "address_key": normalized_name,
+                    "runs": [],
+                    "frame_set": set(),
+                    "sample_name": folder_name,
+                }
+                address_buckets[normalized_name] = bucket
+
+            if pin_value and not bucket.get("pin"):
+                bucket["pin"] = pin_value
+
+            bucket["runs"].append({
+                "name": folder_name,
+                "frames": valid_frame_paths,
+            })
+
+            for frame_path in valid_frame_paths:
+                bucket["frame_set"].add(frame_path)
+
+            # Optional fallback key: PIN. Address matching is attempted first later.
             if pin_value:
-                bucket = pin_buckets.get(pin_value)
-                if bucket is None:
-                    bucket = {
-                        "pin": pin_value,
-                        "runs": [],
-                        "frame_set": set(),
-                        "sample_name": folder_name,
-                    }
-                    pin_buckets[pin_value] = bucket
-
-                bucket["runs"].append({
-                    "name": folder_name,
-                    "frames": valid_frame_paths,
-                })
-                for frame_path in valid_frame_paths:
-                    bucket["frame_set"].add(frame_path)
-            else:
-                if has_real_street_number(normalized_name):
-                    bucket = address_buckets.get(normalized_name)
-                    if bucket is None:
-                        bucket = {
-                            "pin": None,
-                            "runs": [],
-                            "frame_set": set(),
-                            "sample_name": folder_name,
-                        }
-                        address_buckets[normalized_name] = bucket
-
-                    bucket["runs"].append({
-                        "name": folder_name,
-                        "frames": valid_frame_paths,
-                    })
-                    for frame_path in valid_frame_paths:
-                        bucket["frame_set"].add(frame_path)
+                pin_buckets[pin_value] = bucket
 
         arcpy.ResetProgressor()
 
-        total_buckets = len(pin_buckets)
+        unique_buckets = list(address_buckets.values())
+        total_buckets = len(unique_buckets)
+
         arcpy.SetProgressor("step", "Performing Recovery Assessment...", 0, total_buckets, 1)
 
-        for i, (pin_value, bucket) in enumerate(pin_buckets.items(), 1):
+        for i, bucket in enumerate(unique_buckets, 1):
             arcpy.SetProgressorLabel(f"Performing Recovery Assessment {i}/{total_buckets}")
             arcpy.SetProgressorPosition(i)
 
-            all_frames = list(bucket["frame_set"])
+            all_frames = sorted(bucket["frame_set"])
             runs = bucket["runs"]
 
             recovery_score, confidence, have_sequence, have_still, num_runs_used = hybrid_infer(
@@ -986,29 +999,32 @@ class PerformRecoveryAssessment(object):
                 address_value = row[field_index[address_field]]
                 pin_value = row[field_index[pin_field]] if pin_field else None
 
-                pin_key = (
-                    extract_pin_from_text(pin_value)
-                    or extract_pin_from_text(address_value)
-                    or (normalize_text(pin_value) if pin_value else None)
+                normalized_address = normalize_text(address_value) if address_value else None
+                normalized_pin = normalize_text(pin_value) if pin_value else None
+
+                address_plus_pin = (
+                    normalize_text(f"{address_value} {pin_value}")
+                    if address_value and pin_value
+                    else None
                 )
-                matched_bucket = pin_buckets.get(pin_key) if pin_key else None
 
-                if not matched_bucket and address_value:
-                    normalized_address = normalize_text(address_value)
-                    if has_real_street_number(normalized_address):
-                        matched_bucket = address_buckets.get(normalized_address)
+                matched_bucket = address_buckets.get(normalized_address) if normalized_address else None
 
-                if matched_bucket:
+                if not matched_bucket and address_plus_pin:
+                    matched_bucket = address_buckets.get(address_plus_pin)
+
+                if not matched_bucket:
+                    pin_key = (
+                        extract_pin_from_text(pin_value)
+                        or extract_pin_from_text(address_value)
+                        or normalized_pin
+                    )
+                    matched_bucket = pin_buckets.get(pin_key) if pin_key else None
+
+                if matched_bucket and "recovery_score" in matched_bucket:
                     row[field_index["recovery_score"]] = int(matched_bucket["recovery_score"])
                     row[field_index["recovery_state"]] = matched_bucket["recovery_state"]
                     row[field_index["prediction_confidence"]] = float(matched_bucket["prediction_confidence"])
-
-                    if int(matched_bucket["recovery_score"]) >= 1:
-                        row[field_index["prediction_confidence"]] = float(matched_bucket["prediction_confidence"])
-                    elif int(matched_bucket["recovery_score"]) == 0:
-                        row[field_index["prediction_confidence"]] = float(matched_bucket["prediction_confidence"])
-                    else:
-                        row[field_index["prediction_confidence"]] = None
 
                     if attach_frames:
                         image_paths = [
@@ -1019,7 +1035,6 @@ class PerformRecoveryAssessment(object):
 
                         for frame_path in image_paths:
                             rows_for_attachments.append((object_id, frame_path))
-
 
                 else:
                     row[field_index["recovery_score"]] = -1

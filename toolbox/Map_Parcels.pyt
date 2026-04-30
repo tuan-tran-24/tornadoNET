@@ -231,7 +231,7 @@ class MapParcel(object):
             params[2].setErrorMessage("Output must be a feature class inside a File GDB.")
 
     def execute(self, params, messages):
-        arcpy.env.addOutputsToMap = False
+        arcpy.env.addOutputsToMap = True
 
         labeled_roots = []
         raw_text = params[0].valueAsText or ""
@@ -297,7 +297,7 @@ class MapParcel(object):
         if not created:
             try:
                 arcpy.conversion.FeatureClassToFeatureClass(source_fc, target_gdb, base_name)
-                created = _verify_exists(output_fc)
+                created = _wait_for_exists(output_fc)
             except Exception:
                 created = False
 
@@ -306,7 +306,7 @@ class MapParcel(object):
             scratch_gdb = _make_local_scratch_gdb()
             output_fc = os.path.join(scratch_gdb, base_name)
 
-            arcpy.AddWarning(f"Output workspace locked. Writing to local scratch: {out_fc}")
+            arcpy.AddWarning(f"Output workspace locked. Writing to local scratch: {output_fc}")
 
             try:
                 arcpy.management.CopyFeatures(source_fc, output_fc)
