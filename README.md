@@ -21,6 +21,7 @@ Demo data can be found [here](demo)
   * Group frames into Address Folders (i.e., frames containing views of the house)
  
 ![toolbox_process_spatial](assets/toolbox_process_spatial.png)
+**Figure 2**: Workflow of Process Spatial Video & GIS Toolbox. 
 
 ## Step 3: Label Data
 | Recovery States | Elaboration |
@@ -31,12 +32,14 @@ Demo data can be found [here](demo)
 | *4-Rebuilt* | Good as new. Slight or minor damage to nonstructural components. |
 
 ![Samples](assets/samples.png)
-**Figure 2**: Samples of Training Datasets: (a) Uninhabited; (b) Empty; (c) Rebuilding; (d) Rebuilt. 
+**Figure 3**: Samples of Training Datasets: (a) Uninhabited; (b) Empty; (c) Rebuilding; (d) Rebuilt. 
 
 ## Step 4: Split Datasets
 Once all the data are labeled, you can split the datasets into training, validation, and test sets geographically in ArcGIS Pro using the [Split_Datasets.pyt](toolbox/Split_Datasets.pyt) toolbox.
 
 ![toolbox_split_datasets](assets/toolbox_split_datasets.png)
+**Figure 4**: Workflow of the Split Datasets Toolbox. 
+
 ## Step 5: Train Deep Learning Models
 * I have set up 4 different models in [deep_learning](deep_learning). Make sure you download the entire folder to use the notebooks:
 ** [ResNet-50](deep_learning/resnet50.ipynb)
@@ -50,6 +53,7 @@ Additionally, if you want to explore Grad-CAM analysis on data, please refer to 
 Once you train the deep learning models, use the .PTH file to perform large-scale mapping of the recovery dataset.
 
 ![toolbox_perform_recovery_assessment](assets/toolbox_perform_recovery_assessment.png)
+**Figure 5**: Workflow of the Perform Recovery Assessment Toolbox. 
 
 ## Step 7: Analyze Longitudinal Results
 After you perform large-scale mappings of the recovery dataset over multiple time periods, you can perform a longitudinal analysis using the [Perform_Longitudinal_Analysis.pyt](toolbox/Perform_Longitudinal_Analysis.pyt)
