@@ -41,11 +41,11 @@ Once all the data are labeled, you can split the datasets into training, validat
 **Figure 4**: Workflow of the Split Datasets Toolbox. 
 
 ## Step 5: Train Deep Learning Models
-* I have set up 4 different models in [deep_learning](deep_learning). Make sure you download the entire folder to use the notebooks:
-** [ResNet-50](deep_learning/resnet50.ipynb)
-** [Convolutional Neural Network-Long Short-Term Memory](deep_learning/cnn_lstm.ipynb)
-** [Convolutional Neural Network-Long Short-Term Memory](deep_learning/cnn_stm.ipynb)
-** [Swin Transformer V2-Base](deep_learning/swin.ipynb)
+I have set up 4 different models in [deep_learning](deep_learning). Make sure you download the entire folder to use the notebooks:
+* [ResNet-50](deep_learning/resnet50.ipynb)
+* [Convolutional Neural Network-Long Short-Term Memory](deep_learning/cnn_lstm.ipynb)
+* [Convolutional Neural Network-Long Short-Term Memory](deep_learning/cnn_stm.ipynb)
+* [Swin Transformer V2-Base](deep_learning/swin.ipynb)
 
 Additionally, if you want to explore Grad-CAM analysis on data, please refer to [gradcam](deep_learning/grad_cam)
 
