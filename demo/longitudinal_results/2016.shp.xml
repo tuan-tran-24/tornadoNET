@@ -1,0 +1,166 @@
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>The Schneider Corporation</origin>
+				<pubdate>2006</pubdate>
+				<title Sync="TRUE">Parcels</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink Sync="FALSE">withheld</onlink>
+				<ftname Sync="TRUE">Parcels</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>Parcel Boundary for Jasper County.</abstract>
+			<purpose>The purpose of this layer is to indicate the parcel boundary.</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>2006</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">265.381962</westbc>
+				<eastbc Sync="TRUE">265.487696</eastbc>
+				<northbc Sync="TRUE">37.101885</northbc>
+				<southbc Sync="TRUE">37.055056</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">2754285.570000</leftbc><rightbc Sync="TRUE">2785117.920000</rightbc><bottombc Sync="TRUE">323442.950000</bottombc><topbc Sync="TRUE">340471.410000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>Parcels</themekt>
+				<themekey>Parcels</themekey>
+			</theme>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>None</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Sharon Collier</cntper>
+					<cntorg>Jasper County</cntorg>
+				</cntperp>
+				<cntpos>Jasper County Deputy Assessor</cntpos>
+				<cntvoice>417.237.1013</cntvoice>
+				<cntemail>sharonc@ecarthage.com</cntemail>
+				<hours>8-5 Monday - Friday</hours>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="FALSE">ESRI ArcCatalog 9.1.0.780</native>
+		<crossref>
+			<citeinfo>
+				<origin>The Schneider Corporation</origin>
+				<pubdate>2006</pubdate>
+				<title>Parcels</title>
+			</citeinfo>
+		</crossref>
+		<natvform Sync="TRUE">Personal GeoDatabase Feature Class</natvform></idinfo>
+	<dataqual>
+		<lineage><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="FALSE">withheld</srcused><date Sync="TRUE">20061023</date><time Sync="TRUE">13403500</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="FALSE">withheld</srcused><date Sync="TRUE">20070914</date><time Sync="TRUE">11145200</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="FALSE">withheld</srcused><procdate Sync="TRUE">20080809</procdate><proctime Sync="TRUE">21532600</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="FALSE">withheld</srcused><procdate Sync="TRUE">20080813</procdate><proctime Sync="TRUE">10231100</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="2016"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.010000</absres>
+						<ordres Sync="TRUE">0.010000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">survey feet</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><projcsn Sync="TRUE">NAD_1983_StatePlane_Missouri_West_FIPS_2403_Feet</projcsn></cordsysn></horizsys>
+		<vertdef>
+			<altsys>
+				<altres Sync="TRUE">0.000010</altres>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="2016">
+			<enttyp>
+				<enttypl Sync="TRUE">2016</enttypl>
+				<enttypd>Parcels</enttypd>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">0</enttypc></enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape_Leng</attrlabl><attalias Sync="TRUE">Shape_Leng</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr>
+				<attrlabl>SHAPE</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>SHAPE_Area</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape_Area</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>PIN</attrlabl>
+				<attalias Sync="TRUE">PIN</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">Own_Addres</attrlabl><attalias Sync="TRUE">Own_Addres</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">recovery_s</attrlabl><attalias Sync="TRUE">recovery_s</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">recovery_1</attrlabl><attalias Sync="TRUE">recovery_1</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">prediction</attrlabl><attalias Sync="TRUE">prediction</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jasper County</cntper>
+					<cntorg>Jasper County Government</cntorg>
+				</cntperp>
+				<cntvoice>417.237.1013</cntvoice>
+				<hours>8am - 5pm (CST) Monday - Friday</hours>
+			</cntinfo>
+		</distrib>
+		<resdesc>Downloadable Data</resdesc>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20061023</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>The Schneider Corporation</cntorg>
+					<cntper>Jimmy West</cntper>
+				</cntorgp>
+				<cntpos>GIS Project Manager</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>8901 Otis Ave.</address>
+					<city>Indianapolis</city>
+					<state>Indiana</state>
+					<postal>46216</postal>
+				</cntaddr>
+				<cntvoice>317.826.7248</cntvoice>
+				<cntemail>jwest@schneidercorp.com</cntemail>
+				<hours>8-5 Monday- Friday</hours>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta></metainfo>
+	<Esri><CreaDate>20240323</CreaDate><CreaTime>01083400</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20260426</SyncDate><SyncTime>22405400</SyncTime><ModDate>20260426</ModDate><ModTime>22405400</ModTime><DataProperties><itemProps><itemName Sync="TRUE">2016</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize><itemLocation><linkage Sync="TRUE">file://\\ALBERT\C$\Albert\Dr. Koliou Research\DesignSafe\Demo\2016.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits><projcsn Sync="TRUE">NAD_1983_StatePlane_Missouri_West_FIPS_2403_Feet</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.6.0'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_StatePlane_Missouri_West_FIPS_2403_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,2788708.333333333],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-94.5],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9999411764705882],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,36.16666666666666],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,102698]]&lt;/WKT&gt;&lt;XOrigin&gt;-15658800&lt;/XOrigin&gt;&lt;YOrigin&gt;-45949000&lt;/YOrigin&gt;&lt;XYScale&gt;137249632.08009261&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102698&lt;/WKID&gt;&lt;LatestWKID&gt;102698&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddSpatialIndex" Date="20251001" Time="182118">AddSpatialIndex Parcels 0 0 0</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\Merge" Date="20260201" Time="103848">Merge GPLYR_{CD7F304A-C2F2-469A-819D-91C7117F580D};GPLYR_{A810504F-7878-46D2-8568-F7A20023AFAB} C:\Users\al63r\AppData\Local\ParcelModelAttach_Temp\run_20260201_103839_2bd6f1\scratch.gdb\MergedParcels # NO_SOURCE_INFO AUTOMATIC</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20260201" Time="103849">CopyFeatures C:\Users\al63r\AppData\Local\ParcelModelAttach_Temp\run_20260201_103839_2bd6f1\scratch.gdb\MergedParcels C:\Users\al63r\OneDrive\Documents\ArcGIS\Projects\MyProject2\MyProject2.gdb\Combined_PredictAndAttachPINFirst8 # # # #</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddField" Date="20260201" Time="103850">AddField C:\Users\al63r\OneDrive\Documents\ArcGIS\Projects\MyProject2\MyProject2.gdb\Combined_PredictAndAttachPINFirst8 PredID SHORT # # # # NULLABLE NON_REQUIRED #</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddField" Date="20260201" Time="103850">AddField C:\Users\al63r\OneDrive\Documents\ArcGIS\Projects\MyProject2\MyProject2.gdb\Combined_PredictAndAttachPINFirst8 PredName TEXT # # 32 # NULLABLE NON_REQUIRED #</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddField" Date="20260201" Time="103850">AddField C:\Users\al63r\OneDrive\Documents\ArcGIS\Projects\MyProject2\MyProject2.gdb\Combined_PredictAndAttachPINFirst8 PredConf DOUBLE # # # # NULLABLE NON_REQUIRED #</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddField" Date="20260201" Time="103851">AddField C:\Users\al63r\OneDrive\Documents\ArcGIS\Projects\MyProject2\MyProject2.gdb\Combined_PredictAndAttachPINFirst8 AttachCount LONG # # # # NULLABLE NON_REQUIRED #</Process><Process ToolSource="C:\Albert\Dr. Koliou Research\GIS Data\cnn_ttm.pyt\PredictAndAttachPINFirst" Date="20260201" Time="114441">PredictAndAttachPINFirst 'C:\Albert\Dr. Koliou Research\Labeled\2016\Combined';'C:\Albert\Dr. Koliou Research\Labeled\2016\Empty';'C:\Albert\Dr. Koliou Research\Labeled\2016\Other';'C:\Albert\Dr. Koliou Research\Labeled\2016\Rebuilt' 'Jasper County Parcels';'Newton County Parcels' "C:\Albert\Dr. Koliou Research\Models\Final\cnn_ttm_20epochs_final.pth" 0.5 false C:\Users\al63r\OneDrive\Documents\ArcGIS\Projects\MyProject2\MyProject2.gdb\Combined_PredictAndAttachPINFirst8</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\DeleteField" Date="20260421" Time="113957">DeleteField 2016 Graphic_Ac;Legal_Ac;Address;Notes;Zoning;City_PIN;Own_Name DELETE_FIELDS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\DeleteField" Date="20260421" Time="114026">DeleteField 2016 AttachCount DELETE_FIELDS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\DeleteField" Date="20260421" Time="114053">DeleteField 2016 FullPin;MapAcres;DateChange;Legal_Desc;Shape_Leng;NBHD;Price;Book;Page;SaleDt;SaleBook;SalePage;TaxDist;X;Y;Split_2021;PARCEL_PID;PARCEL_PID_1;Legal_Description;Likely_Use;ObjectID_1 DELETE_FIELDS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\UpdateSchema" Date="20260421" Time="114219">UpdateSchema "CIMDATA=&lt;CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.6.0'&gt;&lt;WorkspaceFactory&gt;FileGDB&lt;/WorkspaceFactory&gt;&lt;Dataset&gt;Combined_PredictAndAttachPINFirst8&lt;/Dataset&gt;&lt;DatasetType&gt;esriDTFeatureClass&lt;/DatasetType&gt;&lt;/CIMStandardDataConnection&gt;" &lt;operationSequence&gt;&lt;workflow&gt;&lt;AlterField&gt;&lt;field_name&gt;PredID&lt;/field_name&gt;&lt;new_field_name&gt;recovery_score&lt;/new_field_name&gt;&lt;field_is_nullable&gt;True&lt;/field_is_nullable&gt;&lt;clear_field_alias&gt;False&lt;/clear_field_alias&gt;&lt;/AlterField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AlterField&gt;&lt;field_name&gt;PredName&lt;/field_name&gt;&lt;new_field_name&gt;recovery_state&lt;/new_field_name&gt;&lt;field_type&gt;TEXT&lt;/field_type&gt;&lt;field_is_nullable&gt;True&lt;/field_is_nullable&gt;&lt;clear_field_alias&gt;False&lt;/clear_field_alias&gt;&lt;/AlterField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AlterField&gt;&lt;field_name&gt;PredConf&lt;/field_name&gt;&lt;new_field_name&gt;prediction_confidence&lt;/new_field_name&gt;&lt;field_is_nullable&gt;True&lt;/field_is_nullable&gt;&lt;clear_field_alias&gt;False&lt;/clear_field_alias&gt;&lt;/AlterField&gt;&lt;/workflow&gt;&lt;/operationSequence&gt;</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20260426" Time="224058">CopyFeatures 2016 "C:\Albert\Dr. Koliou Research\DesignSafe\Demo\2016.shp" # # # #</Process></lineage></DataProperties><ArcGISFormat>1.0</ArcGISFormat></Esri><dataIdInfo><envirDesc Sync="FALSE">Esri ArcGIS 10.5.1.7333</envirDesc><dataLang><languageCode Sync="TRUE" value="eng"/><countryCode value="USA" Sync="TRUE"/></dataLang><idCitation><resTitle Sync="TRUE">2016</resTitle><presForm><PresFormCd Sync="TRUE" value="005"/></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"/></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">2754285.57</westBL><eastBL Sync="TRUE">2785117.92</eastBL><northBL Sync="TRUE">340471.41</northBL><southBL Sync="TRUE">323442.95</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">265.381962</westBL><eastBL Sync="TRUE">265.487696</eastBL><northBL Sync="TRUE">37.101885</northBL><southBL Sync="TRUE">37.055056</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="eng"/><countryCode value="USA" Sync="TRUE"/></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="006"/></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"/></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="FALSE">withheld</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc></distorTran><distorFormat><formatName Sync="TRUE">Personal GeoDatabase Feature Class</formatName></distorFormat></distributor><distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE" code="102698">NAD_1983_StatePlane_Missouri_West_FIPS_2403_Feet</identCode><idCodeSpace Sync="TRUE">Esri</idCodeSpace><idVersion Sync="TRUE">8.0.1</idVersion></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><geometObjs Name="2016"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20260426</mdDateSt></metadata>

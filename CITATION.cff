@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+authors:
+- family-names: "Tran"
+  given-names: "Tuan"
+- family-names: "Braik"
+  given-names: "Abdullah"
+- family-names: "Koliou"
+  given-names: "Maria"
+title: "tornadoNET"
+version: 1.0.0
+date-released: 2026-07-29
+url: "https://github.com/tuan-tran-24/tornadoNET"
