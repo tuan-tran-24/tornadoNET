@@ -63,7 +63,7 @@ Demo data can be found [here](demo)
 ![Samples](assets/samples.png)
 **Figure 4**: Samples of Training Datasets: (a) Uninhabited; (b) Empty; (c) Rebuilding; (d) Rebuilt. 
 
-## Step 4: Split Datasets
+## Step 4: Split Training, Validation, and Testing Sets
 Once all the data are labeled, the dataset is geographically split into training, validation, and test sets in ArcGIS Pro using the [Split_Datasets.pyt](toolbox/Split_Datasets.pyt) toolbox.
 
 ![toolbox_split_datasets](assets/toolbox_split_datasets.png)
