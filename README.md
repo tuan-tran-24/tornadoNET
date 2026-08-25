@@ -73,7 +73,7 @@ Once all the data are labeled, the dataset is geographically split into training
 Four deep learning models are set up, trained, validated, and tested in [deep_learning](deep_learning): 
 * [ResNet-50](deep_learning/resnet50.ipynb)
 * [Convolutional Neural Network-Long Short-Term Memory](deep_learning/cnn_lstm.ipynb)
-* [Convolutional Neural Network-Long Short-Term Memory](deep_learning/cnn_stm.ipynb)
+* [Convolutional Neural Network-Sequential Transformer Module](deep_learning/cnn_stm.ipynb)
 * [Swin Transformer V2-Base](deep_learning/swin.ipynb)
 
 To use the Jupyter Notebooks files, ensure the utilities files are also downloaded. Additionally, the deep learning results can be viewed [here](DEEP_LEARNING_RESULTS.md). 
