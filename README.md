@@ -1,4 +1,4 @@
-<h1 align="left"> TornadoNET: A Deep Learning Approach for Geospatial Data to Automate Housing Recovery Assessment Using the 2011 Joplin Tornado and 2021 Mayfield Tornado Datasets </h2>
+<h1 align="left"> TornadoNET: A Deep Learning Approach for Geospatial Data to Automate Housing Recovery Assessment </h2>
 
 <h4 align="left">by <a href="https://www.linkedin.com/in/q-tran/">Tuan Tran</a><sup>a</sup>, <a href="https://www.linkedin.com/in/abdullah-braik-ph-d-0b9189134/">Abdullah Braik</a><sup>b</sup>, <a href="https://www.linkedin.com/in/mariakoliou/">Maria Koliou</a><sup>c</sup></h4>
 
